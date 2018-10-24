@@ -20,3 +20,15 @@ function s(n) {with(document){
   m[j-1].style.display = "block"
   d[j-1].className += " z"}}
 defaultOpen.click()
+var acc = document.getElementsByClassName("accordion");
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
