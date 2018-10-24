@@ -20,14 +20,24 @@ for (i = 0; i < acc.length; i++)
     acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var panel = this.nextElementSibling.style;
-        if (panel.display === "block") panel.display = "none"
-        else panel.display = "block"
+        if (panel.display === "block") panel.display = "none"; else panel.display = "block"
     })
 function openNav() {
     mySidenav.style.width = "250px"; main.style.marginLeft = "250px";
     body.style.backgroundColor = 'rgba(0,0,0,.4)'
 }
 function closeNav() {
-    mySidenav.style.width = "0"; main.style.marginLeft= "0";
+    mySidenav.style.width = 0; main.style.marginLeft= 0;
     body.style.backgroundColor = "white";
-}}
+}
+countDownDate = new Date("Jan 1, 2028").getTime();
+x = setInterval(function() {with (Math){
+    var now = new Date().getTime(); var distance = countDownDate - now;
+    var days = floor(distance / (1000 * 60 * 60 * 24));
+    var hours = floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = floor((distance % (1000 * 60)) / 1000)}
+    mytime.innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+    if (distance < 0) {clearInterval(x); mytime.innerHTML = "Expired"}
+}, 1000)
+}
