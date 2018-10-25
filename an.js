@@ -19,7 +19,7 @@ acc = getElementsByClassName("accordion");
 for (i = 0; i < acc.length; i++)
     acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var panel = this.nextElementSibling.style;
+        let panel = this.nextElementSibling.style;
         if (panel.display === "block") panel.display = "none"; else panel.display = "block"
     })
 function openNav() {
@@ -33,19 +33,18 @@ function closeNav() {
 with (Math) {
 countDownDate = new Date("Jan 1, 2028").getTime();
 x = setInterval(function() {
-    let now = new Date().getTime(); let distance = countDownDate - now;
-    let days = floor(distance / (3600*24000));
-    let hours = floor((distance % (3600*24000)) / (1000 * 60 * 60));
-    let minutes = floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = floor((distance % (1000 * 60)) / 1000)
-    mytime.innerHTML = days + " days " + hours + " hours "+ minutes + " minutes " + seconds + " seconds ";
-    if (distance < 0) {clearInterval(x); mytime.innerHTML = "Expired"}
+    let now = new Date().getTime(); let distance = countDownDate - now; let months=floor(distance/(3600*24e3*28))
+    let weeks=floor(distance/(3600*24e3*7)); let y=floor(distance/(3600*24e3*28*12))
+    let days = floor(distance / (3600*24e3)); let hours = floor((distance % (3600*24e3)) / 36e5);
+    let minutes = floor((distance % 36e5) / 6e4); let seconds = floor((distance % 6e4) / 1e3)
+    mytime.innerHTML ='About '+y+' years or '+months+' months or '+weeks+' weeks; Exactly is '+ days + " days " + hours + " hours "+
+        minutes + " minutes " + seconds + " seconds "
 }, 1000)
 birthday=new Date('May 22, 2018').getTime()
 setInterval(function(){
-    let n=new Date().getTime(); let d=n-birthday; let mo=floor(d/(3600*24000*7*4)); let w=floor(d/(3600*24000*7))
-    let da=floor(d/(3600*24000)); let h=floor((d%(3600*24000))/(1000*60*60))
-    let m=floor((d%(1000*60*60))/1000/60); let s=floor((d%60000)/1000)
+    let n=new Date().getTime(); let d=n-birthday; let mo=floor(d/(3600*24e3*28)); let w=floor(d/(3600*24e3*7))
+    let da=floor(d/(3600*24e3)); let h=floor((d%(3600*24e3))/36e5)
+    let m=floor((d%36e5)/6e4); let s=floor((d%6e4)/1e3)
     yearsold.innerHTML='About '+mo+' months or '+w+' weeks; Exactly is '+da+' days '+h+' hours '+m+' minutes '+s+' seconds'
 }, 1000)}
 }
