@@ -1,4 +1,4 @@
-body {font-family: Arial; transition: background .5s}
+body {font-family: Arial; transition: background .5s} * {box-sizing: border-box}
 .tab {overflow: hidden; border: 1px solid #ccc; background: #f1f1f1}
 .tab button {background: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s;
     font-size: 17px}
@@ -7,7 +7,6 @@ body {font-family: Arial; transition: background .5s}
 .tabcontent {display: none; padding: 6px 12px; -webkit-animation: fadeEffect 1s; animation: fadeEffect 1s}
 @-webkit-keyframes fadeEffect {from {opacity: 0;} to {opacity: 1;}}
 @keyframes fadeEffect {from {opacity: 0;} to {opacity: 1;}}
-* {box-sizing: border-box}
 #sc {max-width: 1000px; position: relative; margin: auto}
 .pr, .next {cursor: pointer; position: absolute; top: 50%; color: white; font-weight: bold; transition: .6s}
 .next {right: 0} .pr:hover, .next:hover {background: black}
@@ -29,3 +28,5 @@ body {font-family: Arial; transition: background .5s}
 .sidenav .closebtn {position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px}
 #main {transition: margin-left .5s; padding: 16px}
 @media screen and (max-height: 450px) {.sidenav {padding-top: 15px;} .sidenav a {font-size: 18px;}}
+#flya {position: absolute; left: 20px; animation: x 15s infinite} @keyframes x {50% {left: 1220px}}
+#flyb {margin-top: 175px; position: absolute; left: 1220px; animation: y 15s infinite} @keyframes y {50% {left: 20px}}
