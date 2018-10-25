@@ -14,7 +14,8 @@ body {font-family: Arial; transition: background .5s} * {box-sizing: border-box}
 .nt {color: white; font-size: 12px; padding: 8px 12px; position: absolute}
 .d {cursor: pointer; height: 15px; width: 15px; background: lightgray; border-radius: 50%; display: inline-block;
 	transition: .6s}
-.z, .d:hover {background: gray} .f {animation: y 2s}
+.z, .d:hover {background: gray} .f {-webkit-animation: y 2s; animation: y 2s}
+@-webkit-keyframes y {from {opacity: .1} to {opacity: 1}}
 @keyframes y {from {opacity: .1} to {opacity: 1}}
 @media only screen and (max-width: 300px) {.pr, .next,.text {font-size: 11px}}
 .accordion {background: #eee; color: #444; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none;
@@ -28,5 +29,7 @@ body {font-family: Arial; transition: background .5s} * {box-sizing: border-box}
 .sidenav .closebtn {position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px}
 #main {transition: margin-left .5s; padding: 16px}
 @media screen and (max-height: 450px) {.sidenav {padding-top: 15px;} .sidenav a {font-size: 18px;}}
-#flya {position: absolute; left: 20px; animation: x 15s infinite} @keyframes x {50% {left: 1220px}}
-#flyb {margin-top: 175px; position: absolute; left: 1220px; animation: y 15s infinite} @keyframes y {50% {left: 20px}}
+#flya {position: absolute; left: 20px; -webkit-animation: x 15s infinite; animation: x 15s infinite}
+@-webkit-keyframes x {50% {left: 1220px}} @keyframes x {50% {left: 1220px}}
+#flyb {margin-top: 175px; position: absolute; left: 1220px; -webkit-animation: z 15s infinite; animation: z 15s infinite}
+@-webkit-keyframes z {50% {left: 20px}} @keyframes z {50% {left: 20px}}
