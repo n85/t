@@ -30,14 +30,22 @@ function closeNav() {
     mySidenav.style.width = 0; main.style.marginLeft= 0;
     body.style.backgroundColor = "white";
 }
+with (Math) {
 countDownDate = new Date("Jan 1, 2028").getTime();
-x = setInterval(function() {with (Math){
-    var now = new Date().getTime(); var distance = countDownDate - now;
-    var days = floor(distance / (1000 * 60 * 60 * 24));
-    var hours = floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = floor((distance % (1000 * 60)) / 1000)}
-    mytime.innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+x = setInterval(function() {
+    let now = new Date().getTime(); let distance = countDownDate - now;
+    let days = floor(distance / (3600*24000));
+    let hours = floor((distance % (3600*24000)) / (1000 * 60 * 60));
+    let minutes = floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = floor((distance % (1000 * 60)) / 1000)
+    mytime.innerHTML = days + " days " + hours + " hours "+ minutes + " minutes " + seconds + " seconds ";
     if (distance < 0) {clearInterval(x); mytime.innerHTML = "Expired"}
 }, 1000)
+birthday=new Date('May 22, 2018').getTime()
+setInterval(function(){
+    let n=new Date().getTime(); let d=n-birthday; let mo=floor(d/(3600*24000*7*4)); let w=floor(d/(3600*24000*7))
+    let da=floor(d/(3600*24000)); let h=floor((d%(3600*24000))/(1000*60*60))
+    let m=floor((d%(1000*60*60))/1000/60); let s=floor((d%60000)/1000)
+    yearsold.innerHTML='About '+mo+' months or '+w+' weeks; Exactly is '+da+' days '+h+' hours '+m+' minutes '+s+' seconds'
+}, 1000)}
 }
