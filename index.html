@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bơ - Bảo An</title>
+	<link rel="stylesheet" href="an.css"><link rel="icon" href="bosmall.jpg">
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=167720593256886&autoLogAppEvents=1';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<div class="tab">
+		<button class="tablinks" onclick="o(event, home)" id="defaultOpen">Home</button>
+		<button class="tablinks" onclick="o(event, aboutMe)">About me</button>
+		<button class="tablinks" onclick="o(event, contactMe)">Contact me</button>
+	</div>
+	<div id="home" class="tabcontent">
+		<div id=sc>
+			<div class="ms f"><div class=nt>1</div> <img src=bo.jpg width=100%> <div class="text">Bơ - Bảo An Vũ</div></div>
+			<div class="ms f"><div class=nt>2</div> <img src=bo2.jpg width=100%> <div class="text">Bơ - Bảo An Vũ 2</div></div>
+			<div class="ms f"><div class=nt>3</div> <img src=bo3.jpg width=100%> <div class="text">Bơ - Bảo An Vũ 3</div></div>
+			<div class="ms f"><div class=nt>4</div> <img src=bo4.jpg width=100%> <div class="text">Bơ - Bảo An Vũ 4</div></div>
+			<div class="ms f"><div class=nt>5</div> <img src=bo5.jpg width=100%> <div class="text">Bơ - Bảo An Vũ 5</div></div>
+			<div class="ms f"><div class=nt>6</div> <img src=bo6.jpg width=100%> <div class="text">Bơ - Bảo An</div></div>
+			<div class="ms f"><div class=nt>7</div> <img src=bo7.jpg width=100%> <div class="text">Bơ - Bảo An</div></div>
+			<div class="ms f"><div class=nt>8</div> <img src=bo8.jpg width=100%> <div class="text">Bơ - Bảo An</div></div>
+			<div class="ms f"><div class=nt>9</div> <img src=bo9.jpg width=100%> <div class="text">Bơ - Bảo An</div></div>
+			<div class="ms f"><div class=nt>10</div> <img src=royalCity.jpg width=100%> <div class="text">With mom in RoyalCity</div></div>
+			<a class=pr onclick="p(-1)">Prev</a><a class="next" onclick="p(1)">Next</a>
+		</div><br>
+		<div style="text-align:center">
+		  <span class=d onclick=cs(1)></span> <span class=d onclick="cs(2)"></span> <span class=d onclick="cs(3)"></span>
+		  <span class=d onclick=cs(4)></span> <span class=d onclick=cs(5)></span> <span class=d onclick=cs(6)></span>
+		  <span class=d onclick=cs(7)></span> <span class=d onclick=cs(8)></span> <span class=d onclick=cs(9)></span>
+		  <span class=d onclick=cs(10)></span>
+		</div>
+	</div>
+	<div id="aboutMe" class="tabcontent">
+		<button class="accordion">Birthday</button>
+		<div class="panel"><p>May 22<sup>th</sup> - 2018</p></div>
+		<button class="accordion">Video</button>
+		<div class="panel"><video autoplay controls style="margin-left: 30vw"><source src="bo.mp4"></video></div><br>
+		<h3 id=mytime style='display: inline'></h3>
+		<span>left, i will work for <a href="https://www.fpt-software.com/">Fsoft</a> as software engineer (Jan 1, 2028)</span>
+		<button class="accordion">My Yearsold</button>
+		<div class="panel"><h3 id=yearsold></h3></div>
+		<img src="b.png" id=flya><img src="b.png" id=flyb>
+	</div>
+	<div id="contactMe" class="tabcontent">
+		<button class="accordion">Place</button>
+		<div class="panel">
+			<p>Native Domicile: Namdinh, Vietnam / Residence: Thanhliet Ward, Thanhtri District, Hanoi, Vietnam</p>
+		</div>
+		<div id="main">
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Relatives & me</span><br>
+			Counter PageViews: <img src="http://hitwebcounter.com/counter/counter.php?page=7014449&style=0001&nbdigits=9&type=page&initCount=0" Alt="web page hit counters codes Free"><br/>
+			Counter UniqueVisitors: <img src="http://hitwebcounter.com/counter/counter.php?page=7014451&style=0001&nbdigits=9&type=ip&initCount=0" Alt="web page hit counters codes Free">
+		</div>
+		<div class="fb-comments" data-href="https://www.facebook.com/vubaoan2018" data-numposts="15"></div>
+	</div>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a target="_blank" href="https://www.facebook.com/nam.vh85">Father FB</a>
+		<a target="_blank" href="https://www.facebook.com/trangbicky.bicky">Mother FB</a>
+		<a target="_blank" href="https://www.facebook.com/vubaoan2018">My FanPage FB</a>
+		<a target="_blank" href="https://www.facebook.com/ha.chjp.54">Aunt Hà FB</a>
+		<a target="_blank" href="https://www.facebook.com/ngocle.duy.52">Uncle Duy FB</a>
+		<a target="_blank" href="https://www.facebook.com/wild.rose.ha">Uncle Hà FB</a>
+	</div>
+	<script src="an.js"></script>
+</body>
+</html>
