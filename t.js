@@ -11,18 +11,25 @@ with(document){
 	for (i = 0; i < d.length; i++) d[i].className = d[i].className.replace(" z", "")
 	m[j-1].style.display = "block"
 	d[j-1].className += " z"}
-}
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
+  tabcontent = getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablinks");
+  tablinks = getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-document.getElementById("defaultOpen").click();
+getElementById("defaultOpen").click();
+acc = getElementsByClassName("accordion");
+for (i = 0; i < acc.length; i++)
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling.style;
+        if (panel.display === "block") panel.display = "none"; else panel.display = "block"
+    })
+}
